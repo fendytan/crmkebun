@@ -30,9 +30,13 @@ class AuthTableSeeder extends Seeder
             config('access.table_names.users'),
         ]);
 
+        $this->call(CompaniesTableSeeder::class);
         $this->call(UserTableSeeder::class);
         $this->call(PermissionRoleTableSeeder::class);
         $this->call(UserRoleTableSeeder::class);
+        $this->call(VehiclesTableSeeder::class);
+        $this->call(SourcesTableSeeder::class);
+        $this->call(DestinationsTableSeeder::class);
 
         $this->enableForeignKeys();
     }
